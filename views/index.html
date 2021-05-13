@@ -4,6 +4,21 @@
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../js/websocket.js"></script>
+        <script>
+            function main() {
+                $("#sendButton").on("click", function() {
+                    sendMessage();
+                });
+
+                $("#chatNavButton").on("click", function() {
+                    window.location = "/";
+                });
+
+                $("#noughtsandcrossesNavButton").on("click", function() {
+                    window.location = "/noughtsandcrosses";
+                });
+            };
+        </script>
         <style>
             .top-bar {
                 background-color: rgb(68, 68, 68);
@@ -39,10 +54,10 @@
             }
         </style>
     </head>
-    <body style="margin: 0;">
+    <body style="margin: 0;" onload="main()">
         <div class="top-bar">
-            <button class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
-            <button class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
+            <button id="chatNavButton" class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
+            <button id="noughtsandcrossesNavButton" class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
         </div>
         <div class="main-div">
             <h4>Basic Instant Messaging with Websockets</h4>
@@ -51,7 +66,7 @@
             </div>
             <div>
                 <input id="chatInput" class="message-input" type="text">
-                <button id="sendButton" class="send-button" onclick="sendMessage()">Send</button>
+                <button id="sendButton" class="send-button">Send</button>
             </div>
         </div>
     </body>

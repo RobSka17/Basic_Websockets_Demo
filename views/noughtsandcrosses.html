@@ -33,6 +33,14 @@
         </style>
         <script>
             function main() {
+                $("#chatNavButton").on("click", function() {
+                    window.location = "/";
+                });
+
+                $("#noughtsandcrossesNavButton").on("click", function() {
+                    window.location = "/noughtsandcrosses";
+                });
+
                 $("#0-default").on("click", function() {
                     $("#0-default").hide();
                     $("#0-nought").show();
@@ -46,8 +54,8 @@
     </head>
     <body style="margin: 0;" onload="main()">
         <div class="top-bar">
-            <button class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
-            <button class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
+            <button id="chatNavButton" class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
+            <button id="noughtsandcrossesNavButton" class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
         </div>
         <div class="main-div">
             <button id="0-default" class="game-button" style="position: absolute; left: 20px;"></button>
