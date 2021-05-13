@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Instant Messaging</title>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../js/websocket.js"></script>
+        <style>
+            .top-bar {
+                background-color: rgb(68, 68, 68);
+                color: rgb(255, 255, 255);
+            }
+
+            .menu-button {
+                background-color: rgb(68, 68, 68);
+                color: rgb(255, 255, 255);
+                border: none;
+                padding: 12px;
+            }
+
+            .menu-button:hover {
+                background-color: rgb(95, 95, 95);
+            }
+
+            .main-div {
+                padding: 12px;
+                max-width: 500px;
+            }
+            .chat-area {
+                border: solid 1px rgb(0, 0, 0);
+                min-height: 200px;
+            }
+            .message-input {
+                border: solid 1px rgb(0, 0, 0);
+                width: 80%;
+            }
+
+            .send-button {
+                width: 18%;
+            }
+        </style>
+    </head>
+    <body style="margin: 0;">
+        <div class="top-bar">
+            <button class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
+            <button class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
+        </div>
+        <div class="main-div">
+            <h4>Basic Instant Messaging with Websockets</h4>
+            <p>This is a demonstration of how websockets can be used to establish multiple realtime client-server connections to produce instant messaging functionality.</p>
+            <div id="chatArea" class="chat-area">
+            </div>
+            <div>
+                <input id="chatInput" class="message-input" type="text">
+                <button id="sendButton" class="send-button" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </body>
+</html>

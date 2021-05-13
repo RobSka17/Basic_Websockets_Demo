@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Noughts and Crosses Game</title>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <style>
+            .top-bar {
+                background-color: rgb(68, 68, 68);
+                color: rgb(255, 255, 255);
+            }
+
+            .menu-button {
+                background-color: rgb(68, 68, 68);
+                color: rgb(255, 255, 255);
+                border: none;
+                padding: 12px;
+            }
+
+            .menu-button:hover {
+                background-color: rgb(95, 95, 95);
+            }
+
+            .main-div {
+                padding: 12px;
+            }
+
+            .game-button {
+                font-size: 32px;
+                width: 50px;
+                height: 50px;
+                border: solid 2px rgb(0, 0, 0);
+            }
+        </style>
+        <script>
+            function main() {
+                $("#0-default").on("click", function() {
+                    $("#0-default").hide();
+                    $("#0-nought").show();
+                });
+            }
+
+            function clickGameButton() {
+
+            }
+        </script>
+    </head>
+    <body style="margin: 0;" onload="main()">
+        <div class="top-bar">
+            <button class="menu-button"><i class="fa fa-comment" aria-hidden="true"></i> Chat</button>
+            <button class="menu-button"><i class="fa fa-circle-o" aria-hidden="true"></i>/<i class="fa fa-times" aria-hidden="true"></i> Noughts & Crosses</button>
+        </div>
+        <div class="main-div">
+            <button id="0-default" class="game-button" style="position: absolute; left: 20px;"></button>
+            <button id="0-nought" class="game-button" style="position: absolute; left: 20px; display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="1-default" class="game-button" style="position: absolute; left: 75px;"></button>
+            <button id="2-default" class="game-button" style="position: absolute; left: 130px;"></button>
+
+            <button id="1-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="2-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <br>
+            <button id="3-default" class="game-button" style="position: absolute; top: 110px; left: 20px;"></button></button>
+            <button id="4-default" class="game-button" style="position: absolute; top: 110px; left: 75px;"></button></button>
+            <button id="5-default" class="game-button" style="position: absolute; top: 110px; left: 130px;"></button></button>
+
+            <button id="3-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="4-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="5-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <br>
+            <button id="6-default" class="game-button" style="position: absolute; top: 168px; left: 20px;"></button>
+            <button id="7-default" class="game-button" style="position: absolute; top: 168px; left: 75px;"></button>
+            <button id="8-default" class="game-button" style="position: absolute; top: 168px; left: 130px;"></button>
+
+            <button id="6-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="7-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+            <button id="8-nought" class="game-button" style="display:none"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+        </div>
+    </body>
+</html>
